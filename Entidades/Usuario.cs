@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Usuario
+    public class Usuario
     {
+        private string _usuarios;
+        private int _contraseña;
 
+
+        public string Usuarios { get => _usuarios; }
+        public int Constraseña { get => _contraseña; }
     }
 }
