@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsPrototype", "WinFormsPrototype\WinFormsPrototype.csproj", "{787651DD-0CCF-44B8-8737-7906D1B6B903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsPrototype", "WinFormsPrototype\WinFormsPrototype.csproj", "{787651DD-0CCF-44B8-8737-7906D1B6B903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{6020C2D3-AA17-48BD-9C83-DD9870D75DA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{787651DD-0CCF-44B8-8737-7906D1B6B903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{787651DD-0CCF-44B8-8737-7906D1B6B903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{787651DD-0CCF-44B8-8737-7906D1B6B903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6020C2D3-AA17-48BD-9C83-DD9870D75DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6020C2D3-AA17-48BD-9C83-DD9870D75DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6020C2D3-AA17-48BD-9C83-DD9870D75DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6020C2D3-AA17-48BD-9C83-DD9870D75DA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

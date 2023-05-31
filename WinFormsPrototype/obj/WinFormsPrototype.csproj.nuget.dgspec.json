@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sofip\\Source\\Repos\\WinFormsPrototype\\WinFormsPrototype\\WinFormsPrototype.csproj": {}
+    "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\WinFormsPrototype\\WinFormsPrototype.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sofip\\Source\\Repos\\WinFormsPrototype\\WinFormsPrototype\\WinFormsPrototype.csproj": {
+    "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\WinFormsPrototype\\WinFormsPrototype.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sofip\\Source\\Repos\\WinFormsPrototype\\WinFormsPrototype\\WinFormsPrototype.csproj",
+        "projectUniqueName": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\WinFormsPrototype\\WinFormsPrototype.csproj",
         "projectName": "WinFormsPrototype",
-        "projectPath": "C:\\Users\\sofip\\Source\\Repos\\WinFormsPrototype\\WinFormsPrototype\\WinFormsPrototype.csproj",
-        "packagesPath": "C:\\Users\\sofip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sofip\\Source\\Repos\\WinFormsPrototype\\WinFormsPrototype\\obj\\",
+        "projectPath": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\WinFormsPrototype\\WinFormsPrototype.csproj",
+        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\WinFormsPrototype\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sofip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -45,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

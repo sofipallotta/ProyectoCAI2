@@ -131,6 +131,7 @@ namespace WinFormsPrototype
             this.dateTimePickerInicio.Name = "dateTimePickerInicio";
             this.dateTimePickerInicio.Size = new System.Drawing.Size(91, 23);
             this.dateTimePickerInicio.TabIndex = 21;
+            this.dateTimePickerInicio.ValueChanged += new System.EventHandler(this.dateTimePickerInicio_ValueChanged);
             // 
             // dateTimePickerFin
             // 
@@ -262,6 +263,7 @@ namespace WinFormsPrototype
             this.checkBox4.Text = "Hotel Americano - 3 estrellas";
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.Visible = false;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // TotalHotel3
             // 
