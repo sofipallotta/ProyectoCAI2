@@ -266,5 +266,15 @@ namespace WinFormsPrototype
         {
 
         }
+
+        private void dateTimePickerInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
