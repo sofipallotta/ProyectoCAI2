@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Persona
+     public class Persona
     {
+        private int _DNI;
+        private string _nombreCompleto;
+
+        public int DNI { get => _DNI;  set => _DNI = value;}
+        public string nombreCompleto { get => _nombreCompleto; set => _nombreCompleto = value; }
+
     }
 }

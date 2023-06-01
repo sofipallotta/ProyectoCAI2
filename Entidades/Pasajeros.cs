@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Pasajeros
+    public class Pasajeros
     {
+        private int _DNI;
+        private string _nombreCompleto;
+        private DateTime _fechaNacimiento;
+
+        public int DNI { get => _DNI; set => _DNI = value; }
+        public string nombreCompleto { get => _nombreCompleto; set => _nombreCompleto = value; }
+        public DateTime fechaNacimiento { get => _fechaNacimiento; }
+
     }
 }

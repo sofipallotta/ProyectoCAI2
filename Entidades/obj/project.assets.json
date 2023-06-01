@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\pablo\\.nuget\\packages\\": {}
+    "C:\\Users\\sofip\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\sofip\\Documents\\GitHub\\ProyectoCAI2\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\source\\repos\\ProyectoCAI2\\Entidades\\obj\\",
+      "projectPath": "C:\\Users\\sofip\\Documents\\GitHub\\ProyectoCAI2\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\sofip\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sofip\\Documents\\GitHub\\ProyectoCAI2\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sofip\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
