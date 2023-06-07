@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WinFormsPrototype
 {
@@ -48,14 +51,17 @@ namespace WinFormsPrototype
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //NO ESTA LISTO.PINCHAAAAAAA!!!
         {
-            {
-                string usuario = textBoxUsuario.Text;
-                string contraseña = textBoxContraseña.Text;
+            MessageBox.Show("Inicio de sesión exitoso");
 
-                // Verificar si el usuario y la contraseña son válidos
-                if (usuario == "JuanRoman" && contraseña == "1234")
+            // Mostrar el siguiente formulario
+
+            List < Usuario > usuarios  = Usuario.TraerUsuario();
+
+            foreach (Usuario usuario in usuarios)
+            {
+                if (textBoxUsuario.Text == usuario.usuarios && textBoxContraseña.Text == usuario.constraseña.ToString())
                 {
                     // Inicio de sesión exitoso
                     MessageBox.Show("Inicio de sesión exitoso");
@@ -66,18 +72,26 @@ namespace WinFormsPrototype
 
                     // Ocultar el formulario actual
                     this.Hide();
-                }
-                else
+
+                    // Si encontraste el usuario, puedes salir del bucle
+                    break;
+                }else
                 {
-                    // Inicio de sesión fallido
-                    MessageBox.Show("Inicio de sesión fallido. Intente nuevamente.");
+                    MessageBox.Show("Usuario o contraseña incorrecta");
                 }
+
             }
+        }
+
+        private bool TraerUsuario()
+        {
+            throw new NotImplementedException();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+
         }
     }
 }

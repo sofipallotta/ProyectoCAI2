@@ -64,3 +64,11 @@ C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-windows\WinFormsPrototype.pdb
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-windows\WinFormsPrototype.genruntimeconfig.cache
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-windows\ref\WinFormsPrototype.dll
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-windows\WinFormsPrototype.csproj.CopyComplete
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.deps.json
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.runtimeconfig.json
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.runtimeconfig.dev.json
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.exe
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.pdb

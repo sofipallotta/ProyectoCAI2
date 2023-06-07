@@ -70,7 +70,7 @@ namespace WinFormsPrototype
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(150, 325);
+            this.button2.Location = new System.Drawing.Point(150, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(300, 45);
             this.button2.TabIndex = 8;

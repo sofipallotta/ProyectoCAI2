@@ -1,15 +1,15 @@
 [
   {
-    "usuairio": "Juan",
-    "contraseña": "123456"
+    "usuario": "JuanRoman",
+    "contraseÃ±a": "1234"
   },
   {
-    "usuairio": "Pepe",
-    "contraseña": "123456"
+    "usuario": "Pepe",
+    "contraseÃ±a": "123456"
   },
   {
-    "usuairio": "Ramon",
-    "contraseña": "123456"
+    "usuario": "Ramon",
+    "contraseÃ±a": "123456"
   }
 ]
 

@@ -32,32 +32,36 @@ namespace WinFormsPrototype
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dateTimePickerInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFin = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.producto = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxPersonas = new System.Windows.Forms.ComboBox();
-            this.groupBoxAlojamiento = new System.Windows.Forms.GroupBox();
-            this.totalAlojamientoMadrid = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.TotalHotel3 = new System.Windows.Forms.Label();
-            this.TotalHotel2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.TotalHotel1 = new System.Windows.Forms.Label();
-            this.labelTotalReserva = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxOrigen = new System.Windows.Forms.TextBox();
+            this.textBoxDestino = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelTotalReserva = new System.Windows.Forms.Label();
+            this.TotalHotel1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TotalHotel2 = new System.Windows.Forms.Label();
+            this.TotalHotel3 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.totalAlojamientoMadrid = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.groupBoxAlojamiento = new System.Windows.Forms.GroupBox();
+            this.precioTotal = new System.Windows.Forms.Label();
             this.groupBoxAlojamiento.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +87,7 @@ namespace WinFormsPrototype
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Alojamientos";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -95,55 +99,29 @@ namespace WinFormsPrototype
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Vuelos";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(475, 104);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(73, 19);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Paquetes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 143);
+            this.label3.Location = new System.Drawing.Point(36, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Fecha inicio";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(209, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 15);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Fecha fin";
-            // 
             // dateTimePickerInicio
             // 
-            this.dateTimePickerInicio.Location = new System.Drawing.Point(88, 137);
+            this.dateTimePickerInicio.Location = new System.Drawing.Point(112, 139);
             this.dateTimePickerInicio.Name = "dateTimePickerInicio";
             this.dateTimePickerInicio.Size = new System.Drawing.Size(91, 23);
             this.dateTimePickerInicio.TabIndex = 21;
-            this.dateTimePickerInicio.ValueChanged += new System.EventHandler(this.dateTimePickerInicio_ValueChanged);
-            // 
-            // dateTimePickerFin
-            // 
-            this.dateTimePickerFin.Location = new System.Drawing.Point(270, 137);
-            this.dateTimePickerFin.Name = "dateTimePickerFin";
-            this.dateTimePickerFin.Size = new System.Drawing.Size(89, 23);
-            this.dateTimePickerFin.TabIndex = 22;
+            this.dateTimePickerInicio.ValueChanged += new System.EventHandler(this.DateTimePickerInicio_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(365, 143);
+            this.label5.Location = new System.Drawing.Point(465, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 15);
             this.label5.TabIndex = 24;
@@ -157,90 +135,194 @@ namespace WinFormsPrototype
             this.producto.Size = new System.Drawing.Size(115, 15);
             this.producto.TabIndex = 26;
             this.producto.Text = "Seleccione producto";
-            this.producto.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Madrid",
-            "Miami",
-            "Asunción"});
-            this.comboBox1.Location = new System.Drawing.Point(475, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 27;
-            this.comboBox1.Text = "Destino";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.producto.Click += new System.EventHandler(this.Label1_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(602, 143);
+            this.label1.Location = new System.Drawing.Point(369, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Personas";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            this.label1.Text = "Menores";
+            this.label1.Click += new System.EventHandler(this.Label1_Click_2);
             // 
-            // comboBoxPersonas
+            // label4
             // 
-            this.comboBoxPersonas.FormattingEnabled = true;
-            this.comboBoxPersonas.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBoxPersonas.Location = new System.Drawing.Point(662, 137);
-            this.comboBoxPersonas.Name = "comboBoxPersonas";
-            this.comboBoxPersonas.Size = new System.Drawing.Size(48, 23);
-            this.comboBoxPersonas.TabIndex = 29;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(220, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 15);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Seleccione origen";
             // 
-            // groupBoxAlojamiento
+            // textBoxOrigen
             // 
-            this.groupBoxAlojamiento.Controls.Add(this.totalAlojamientoMadrid);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox6);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox5);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox4);
-            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel3);
-            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel2);
-            this.groupBoxAlojamiento.Controls.Add(this.label8);
-            this.groupBoxAlojamiento.Controls.Add(this.label7);
-            this.groupBoxAlojamiento.Controls.Add(this.button1);
-            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel1);
-            this.groupBoxAlojamiento.Controls.Add(this.labelTotalReserva);
-            this.groupBoxAlojamiento.Controls.Add(this.label6);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox3);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox2);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox1);
-            this.groupBoxAlojamiento.Location = new System.Drawing.Point(12, 195);
-            this.groupBoxAlojamiento.Name = "groupBoxAlojamiento";
-            this.groupBoxAlojamiento.Size = new System.Drawing.Size(728, 194);
-            this.groupBoxAlojamiento.TabIndex = 30;
-            this.groupBoxAlojamiento.TabStop = false;
-            this.groupBoxAlojamiento.Text = "Alojamientos";
-            this.groupBoxAlojamiento.Visible = false;
-            this.groupBoxAlojamiento.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.textBoxOrigen.Location = new System.Drawing.Point(342, 139);
+            this.textBoxOrigen.Name = "textBoxOrigen";
+            this.textBoxOrigen.Size = new System.Drawing.Size(75, 23);
+            this.textBoxOrigen.TabIndex = 32;
+            this.textBoxOrigen.TextChanged += new System.EventHandler(this.TextBox1_TextChanged_1);
             // 
-            // totalAlojamientoMadrid
+            // textBoxDestino
             // 
-            this.totalAlojamientoMadrid.AutoSize = true;
-            this.totalAlojamientoMadrid.Location = new System.Drawing.Point(590, 137);
-            this.totalAlojamientoMadrid.Name = "totalAlojamientoMadrid";
-            this.totalAlojamientoMadrid.Size = new System.Drawing.Size(0, 15);
-            this.totalAlojamientoMadrid.TabIndex = 44;
-            this.totalAlojamientoMadrid.Click += new System.EventHandler(this.label9_Click_1);
+            this.textBoxDestino.Location = new System.Drawing.Point(576, 142);
+            this.textBoxDestino.Name = "textBoxDestino";
+            this.textBoxDestino.Size = new System.Drawing.Size(79, 23);
+            this.textBoxDestino.TabIndex = 33;
+            this.textBoxDestino.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // checkBox6
+            // textBox3
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(11, 87);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(170, 19);
-            this.checkBox6.TabIndex = 43;
-            this.checkBox6.Text = "Hotel Maryland - 4 estrellas";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.Visible = false;
+            this.textBox3.Location = new System.Drawing.Point(434, 174);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(35, 23);
+            this.textBox3.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(204, 177);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 15);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Adultos";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(275, 174);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(35, 23);
+            this.textBox4.TabIndex = 36;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(510, 174);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(11, 37);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(196, 19);
+            this.checkBox1.TabIndex = 31;
+            this.checkBox1.Text = "Hotel Panamericano - 3 estrellas";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(11, 62);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(189, 19);
+            this.checkBox2.TabIndex = 32;
+            this.checkBox2.Text = "Hotel Cuesta Chica - 2 estrellas";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(11, 87);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(151, 19);
+            this.checkBox3.TabIndex = 33;
+            this.checkBox3.Text = "Hotel Faena - 4 estrellas";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Visible = false;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.CheckBox3_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(533, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 15);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Precio";
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
+            // 
+            // labelTotalReserva
+            // 
+            this.labelTotalReserva.Location = new System.Drawing.Point(0, 0);
+            this.labelTotalReserva.Name = "labelTotalReserva";
+            this.labelTotalReserva.Size = new System.Drawing.Size(100, 23);
+            this.labelTotalReserva.TabIndex = 47;
+            // 
+            // TotalHotel1
+            // 
+            this.TotalHotel1.Location = new System.Drawing.Point(0, 0);
+            this.TotalHotel1.Name = "TotalHotel1";
+            this.TotalHotel1.Size = new System.Drawing.Size(100, 23);
+            this.TotalHotel1.TabIndex = 46;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(689, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "continuar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(533, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 15);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Precio";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(533, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 15);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Precio";
+            // 
+            // TotalHotel2
+            // 
+            this.TotalHotel2.AutoSize = true;
+            this.TotalHotel2.Location = new System.Drawing.Point(590, 66);
+            this.TotalHotel2.Name = "TotalHotel2";
+            this.TotalHotel2.Size = new System.Drawing.Size(0, 15);
+            this.TotalHotel2.TabIndex = 39;
+            this.TotalHotel2.Click += new System.EventHandler(this.Label9_Click);
+            // 
+            // TotalHotel3
+            // 
+            this.TotalHotel3.AutoSize = true;
+            this.TotalHotel3.Location = new System.Drawing.Point(590, 91);
+            this.TotalHotel3.Name = "TotalHotel3";
+            this.TotalHotel3.Size = new System.Drawing.Size(10, 15);
+            this.TotalHotel3.TabIndex = 40;
+            this.TotalHotel3.Text = " ";
+            this.TotalHotel3.Click += new System.EventHandler(this.TotalHotel3_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(11, 37);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(178, 19);
+            this.checkBox4.TabIndex = 41;
+            this.checkBox4.Text = "Hotel Americano - 3 estrellas";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Visible = false;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.CheckBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -253,146 +335,93 @@ namespace WinFormsPrototype
             this.checkBox5.UseVisualStyleBackColor = true;
             this.checkBox5.Visible = false;
             // 
-            // checkBox4
+            // checkBox6
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(11, 37);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(178, 19);
-            this.checkBox4.TabIndex = 41;
-            this.checkBox4.Text = "Hotel Americano - 3 estrellas";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Visible = false;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(11, 87);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(170, 19);
+            this.checkBox6.TabIndex = 43;
+            this.checkBox6.Text = "Hotel Maryland - 4 estrellas";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.Visible = false;
             // 
-            // TotalHotel3
+            // totalAlojamientoMadrid
             // 
-            this.TotalHotel3.AutoSize = true;
-            this.TotalHotel3.Location = new System.Drawing.Point(590, 91);
-            this.TotalHotel3.Name = "TotalHotel3";
-            this.TotalHotel3.Size = new System.Drawing.Size(10, 15);
-            this.TotalHotel3.TabIndex = 40;
-            this.TotalHotel3.Text = " ";
-            this.TotalHotel3.Click += new System.EventHandler(this.TotalHotel3_Click);
+            this.totalAlojamientoMadrid.AutoSize = true;
+            this.totalAlojamientoMadrid.Location = new System.Drawing.Point(590, 137);
+            this.totalAlojamientoMadrid.Name = "totalAlojamientoMadrid";
+            this.totalAlojamientoMadrid.Size = new System.Drawing.Size(0, 15);
+            this.totalAlojamientoMadrid.TabIndex = 44;
+            this.totalAlojamientoMadrid.Click += new System.EventHandler(this.Label9_Click_1);
             // 
-            // TotalHotel2
+            // checkBox7
             // 
-            this.TotalHotel2.AutoSize = true;
-            this.TotalHotel2.Location = new System.Drawing.Point(590, 66);
-            this.TotalHotel2.Name = "TotalHotel2";
-            this.TotalHotel2.Size = new System.Drawing.Size(0, 15);
-            this.TotalHotel2.TabIndex = 39;
-            this.TotalHotel2.Click += new System.EventHandler(this.label9_Click);
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(33, 112);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(83, 19);
+            this.checkBox7.TabIndex = 32;
+            this.checkBox7.Text = "checkBox7";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.CheckBox7_CheckedChanged);
             // 
-            // label8
+            // groupBoxAlojamiento
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(533, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 15);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Precio";
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox7);
+            this.groupBoxAlojamiento.Controls.Add(this.totalAlojamientoMadrid);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox6);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox5);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox4);
+            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel3);
+            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel2);
+            this.groupBoxAlojamiento.Controls.Add(this.label8);
+            this.groupBoxAlojamiento.Controls.Add(this.label7);
+            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel1);
+            this.groupBoxAlojamiento.Controls.Add(this.labelTotalReserva);
+            this.groupBoxAlojamiento.Controls.Add(this.label6);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox3);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox2);
+            this.groupBoxAlojamiento.Controls.Add(this.checkBox1);
+            this.groupBoxAlojamiento.Location = new System.Drawing.Point(717, 244);
+            this.groupBoxAlojamiento.Name = "groupBoxAlojamiento";
+            this.groupBoxAlojamiento.Size = new System.Drawing.Size(47, 79);
+            this.groupBoxAlojamiento.TabIndex = 30;
+            this.groupBoxAlojamiento.TabStop = false;
+            this.groupBoxAlojamiento.Text = "Alojamientos";
+            this.groupBoxAlojamiento.Visible = false;
+            this.groupBoxAlojamiento.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // label7
+            // precioTotal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(533, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 15);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Precio";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(638, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "continuar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // TotalHotel1
-            // 
-            this.TotalHotel1.AutoSize = true;
-            this.TotalHotel1.Location = new System.Drawing.Point(590, 41);
-            this.TotalHotel1.Name = "TotalHotel1";
-            this.TotalHotel1.Size = new System.Drawing.Size(22, 15);
-            this.TotalHotel1.TabIndex = 35;
-            this.TotalHotel1.Text = "     ";
-            this.TotalHotel1.Click += new System.EventHandler(this.TotalHotel1_Click);
-            // 
-            // labelTotalReserva
-            // 
-            this.labelTotalReserva.AutoSize = true;
-            this.labelTotalReserva.Location = new System.Drawing.Point(590, 53);
-            this.labelTotalReserva.Name = "labelTotalReserva";
-            this.labelTotalReserva.Size = new System.Drawing.Size(0, 15);
-            this.labelTotalReserva.TabIndex = 34;
-            this.labelTotalReserva.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(533, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 15);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Precio";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(11, 87);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(151, 19);
-            this.checkBox3.TabIndex = 33;
-            this.checkBox3.Text = "Hotel Faena - 4 estrellas";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.Visible = false;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(11, 62);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(189, 19);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.Text = "Hotel Cuesta Chica - 2 estrellas";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Visible = false;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(11, 37);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(196, 19);
-            this.checkBox1.TabIndex = 31;
-            this.checkBox1.Text = "Hotel Panamericano - 3 estrellas";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.precioTotal.AutoSize = true;
+            this.precioTotal.Location = new System.Drawing.Point(689, 381);
+            this.precioTotal.Name = "precioTotal";
+            this.precioTotal.Size = new System.Drawing.Size(44, 15);
+            this.precioTotal.TabIndex = 38;
+            this.precioTotal.Text = "label10";
+            this.precioTotal.Click += new System.EventHandler(this.precioTotal_Click);
             // 
             // _3raPantalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.precioTotal);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxDestino);
+            this.Controls.Add(this.textBoxOrigen);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBoxAlojamiento);
-            this.Controls.Add(this.comboBoxPersonas);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.producto);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePickerFin);
             this.Controls.Add(this.dateTimePickerInicio);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label2);
@@ -411,31 +440,35 @@ namespace WinFormsPrototype
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePickerInicio;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label producto;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxPersonas;
-        private System.Windows.Forms.GroupBox groupBoxAlojamiento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxOrigen;
+        private System.Windows.Forms.TextBox textBoxDestino;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTotalReserva;
         private System.Windows.Forms.Label TotalHotel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label TotalHotel3;
-        private System.Windows.Forms.Label TotalHotel2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label TotalHotel2;
+        private System.Windows.Forms.Label TotalHotel3;
         private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.Label totalAlojamientoMadrid;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.GroupBox groupBoxAlojamiento;
+        private System.Windows.Forms.Label precioTotal;
     }
 }

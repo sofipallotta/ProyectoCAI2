@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4mxTay/zFVwoaCYylM1k1ab0yQoDss+LXTJ687k9Ez6IspGLMpIsy1qAe+FVV7kLFB/VNgZkqzmTe6cx/IOQXQ==",
+  "dgSpecHash": "5cMbFostqYBQmyghetH8B0PUr1JiiVZUpAC8DFkrKv/6ddeXAyB8MRXY/R7zmNE8EayyivLdnS95XwufJXQZQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sofip\\Documents\\GitHub\\ProyectoCAI2\\WinFormsPrototype\\WinFormsPrototype.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sofip\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
