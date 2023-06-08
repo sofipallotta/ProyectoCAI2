@@ -1,39 +1,39 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+
 
 namespace WinFormsPrototype
 {
     public partial class _3raPantalla : Form
     {
-        int total = 0;
-        int totalHotel1 = 0;
-        int totalHotel2 = 0;
-        int totalHotel3 = 0;
+        double acumulador = 0;
         public _3raPantalla()
         {
             InitializeComponent();
         }
+
+        private FlowLayoutPanel flowLayoutPanel;
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void _3raPantalla_Load(object sender, EventArgs e)
         {
+
 
         }
 
@@ -47,7 +47,7 @@ namespace WinFormsPrototype
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
@@ -60,169 +60,121 @@ namespace WinFormsPrototype
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void CheckedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void MonthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void Label1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-            
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() == "Madrid")
+
+
+        }
+
+
+        private void Label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea agregar otro producto?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == DialogResult.Yes)
             {
-                checkBox1.Visible = true;
-                checkBox2.Visible = true;
-                checkBox3.Visible = true;
+                // Navegar a la tercera pantalla en blanco (3raPantalla)
+                _3raPantalla formaTerceraPantalla = new _3raPantalla();
+                formaTerceraPantalla.Show();
+
+                // Ocultar o cerrar el formulario actual si ya no lo necesitas
+                this.Hide(); // O this.Close() si deseas cerrarlo
             }
-            else
+            else if (respuesta == DialogResult.No)
             {
-                checkBox1.Visible = false;
-                checkBox2.Visible = false;
-                checkBox3.Visible = false;
+                // Navegar a la cuarta pantalla (4taPantalla)
+                _4taPantalla formaCuartaPantalla = new _4taPantalla();
+                formaCuartaPantalla.Show();
 
+                // Ocultar o cerrar el formulario actual si ya no lo necesitas
+                this.Hide(); // O this.Close() si deseas cerrarlo
             }
-            if (comboBox1.SelectedItem.ToString() == "Miami")
-            {
-                checkBox4.Visible = true;
-                checkBox5.Visible = true;
-                checkBox6.Visible = true;
-            }
-            else
-            {
-                checkBox4.Visible = false;
-                checkBox5.Visible = false;
-                checkBox6.Visible = false;
-
-            }
-
         }
 
-
-        private void label1_Click_2(object sender, EventArgs e)
+        private void Label9_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            //hotel 1 madrid 
-            DateTime fechaInicio = dateTimePickerInicio.Value;
-            DateTime fechaFin = dateTimePickerFin.Value;
-            TimeSpan duracionReserva = fechaFin - fechaInicio;
-            int cantidadNoches = Convert.ToInt32(duracionReserva.TotalDays);
-            int precioPorPersona = 17530; // Precio por persona por noche
-            int cantidadPersonas = Convert.ToInt32(comboBoxPersonas.SelectedItem);
-            int totalReserva = precioPorPersona * cantidadPersonas * cantidadNoches;
-            if (checkBox1.Checked)
-            {
-                // Incrementar el total
-                totalHotel1 = totalReserva;
-                total += totalReserva;
-            }else
-            {
-                totalHotel1 -= totalReserva;
-                total -= totalReserva;
-            }
-
-            TotalHotel1.Text = "Total: " + totalHotel1.ToString();
-            totalAlojamientoMadrid.Text = "Total: " + total.ToString();
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            //Hotel3 madrid 
-            DateTime fechaInicio = dateTimePickerInicio.Value;
-            DateTime fechaFin = dateTimePickerFin.Value;
-            TimeSpan duracionReserva = fechaFin - fechaInicio;
-            int cantidadNoches = Convert.ToInt32(duracionReserva.TotalDays);
-            int precioPorPersona = 26860; // Precio por persona por noche
-            int cantidadPersonas = Convert.ToInt32(comboBoxPersonas.SelectedItem);
-            int totalReserva = precioPorPersona * cantidadPersonas * cantidadNoches;
-
-
-            if (checkBox3.Checked)
-            {
-                // Incrementar el total
-                totalHotel3 = totalReserva;
-                total += totalReserva;
-            }
-            else
-            {
-                totalHotel3 -= totalReserva;
-                total -= totalReserva;
-            }
-            TotalHotel3.Text = "Total: " + totalHotel3.ToString();
-            totalAlojamientoMadrid.Text = "Total: " + total.ToString();
         }
 
         private void TotalHotel3_Click(object sender, EventArgs e)
@@ -230,49 +182,203 @@ namespace WinFormsPrototype
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
         {
-            //Hotel2 madrid 
-            DateTime fechaInicio = dateTimePickerInicio.Value;
-            DateTime fechaFin = dateTimePickerFin.Value;
-            TimeSpan duracionReserva = fechaFin - fechaInicio;
-            int cantidadNoches = Convert.ToInt32(duracionReserva.TotalDays);
-            int precioPorPersona = 43500; // Precio por persona por noche
-            int cantidadPersonas = Convert.ToInt32(comboBoxPersonas.SelectedItem);
-            int totalReserva = precioPorPersona * cantidadPersonas * cantidadNoches;
-           
-            if (checkBox2.Checked)
+
+        }
+
+        private void Label9_Click_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            List<Vuelo> vuelos = Vuelo.TraerVuelo();
+
+            int y = 210; // Posición vertical inicial
+            System.Windows.Forms.CheckBox lastCheckedBox = null;
+            
+
+            foreach (Vuelo vuelo in vuelos)
             {
-                // Incrementar el total
-                totalHotel2 = totalReserva;
-                total += totalReserva;
+                if (vuelo.origen == textBoxOrigen.Text)
+                {
+                    System.Windows.Forms.CheckBox checkBox = new System.Windows.Forms.CheckBox();
+                    // checkBox.Text = vuelo.nombreProducto + vuelo.idVuelo;
+                    checkBox.Text = "Aerolinea: " + vuelo.nombreProducto + "ID: " + vuelo.idVuelo + " Precio: " + vuelo.precio;
+                    checkBox.AutoSize = true;
+                    checkBox.Location = new System.Drawing.Point(100, y);
+
+                    checkBox.CheckedChanged += (sender, e) =>
+                    {
+                        if (checkBox.Checked)
+                        {
+
+                            if (lastCheckedBox != null && lastCheckedBox != checkBox)
+                                lastCheckedBox.Checked = false;
+                            // Establece el CheckBox actual como el último CheckBox seleccionado
+                            lastCheckedBox = checkBox;
+                            acumulador += vuelo.precio;
+                        }
+                        else
+                        {
+                            acumulador -= vuelo.precio;
+                        }
+                        precioTotal.Text = "Precio Total: " + acumulador.ToString("C");
+                    };
+
+                    this.Controls.Add(checkBox);
+                    y += checkBox.Height + 10;
+                }
+                /*System.Windows.Forms.CheckBox checkBox = new System.Windows.Forms.CheckBox();
+                // checkBox.Text = vuelo.nombreProducto + vuelo.idVuelo;
+                checkBox.Text = "Aerolinea: " + vuelo.nombreProducto + "ID: " + vuelo.idVuelo + " Precio: " + vuelo.precio;
+                checkBox.AutoSize = true;
+                checkBox.Location = new System.Drawing.Point(100, y);
+
+                checkBox.CheckedChanged += (sender, e) =>
+                {
+                    if (checkBox.Checked)
+                    {
+                        
+                        if (lastCheckedBox != null && lastCheckedBox != checkBox)
+                            lastCheckedBox.Checked = false;
+                        // Establece el CheckBox actual como el último CheckBox seleccionado
+                        lastCheckedBox = checkBox;
+                        acumulador += vuelo.precio;
+                    }
+                    else
+                    {
+                        acumulador -= vuelo.precio;
+                    }
+                    precioTotal.Text = "Precio Total: " + acumulador.ToString("C");
+                };
+
+                this.Controls.Add(checkBox);
+                y += checkBox.Height + 10; */
             }
-            else
+        }
+
+        private void DateTimePickerInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            List<Vuelo> vuelos = Vuelo.TraerVuelo();
+
+            int y = 210; // Posición vertical inicial
+            System.Windows.Forms.CheckBox lastCheckedBox = null;
+
+
+            foreach (Vuelo vuelo in vuelos)
             {
-                totalHotel2 -= totalReserva;
-                total -= totalReserva;
+
+                if (vuelo.origen == textBoxOrigen.Text)
+                {
+
+                    System.Windows.Forms.CheckBox checkBox = new System.Windows.Forms.CheckBox();
+                    // checkBox.Text = vuelo.nombreProducto + vuelo.idVuelo;
+                    checkBox.Text = "Aerolinea: " + vuelo.nombreProducto + "ID: " + vuelo.idVuelo + " Precio: " + vuelo.precio;
+                    checkBox.AutoSize = true;
+                    checkBox.Location = new System.Drawing.Point(100, y);
+
+                    checkBox.CheckedChanged += (sender, e) =>
+                    {
+                        if (checkBox.Checked)
+                        {
+
+                            if (lastCheckedBox != null && lastCheckedBox != checkBox)
+                                lastCheckedBox.Checked = false;
+                            // Establece el CheckBox actual como el último CheckBox seleccionado
+                            lastCheckedBox = checkBox;
+                            acumulador += vuelo.precio;
+                        }
+                        else
+                        {
+                            acumulador -= vuelo.precio;
+                        }
+                        precioTotal.Text = "Precio Total: " + acumulador.ToString("C");
+                    };
+
+                    this.Controls.Add(checkBox);
+                    y += checkBox.Height + 10;
+                }
             }
-            TotalHotel2.Text = "Total: " + totalHotel2.ToString();
-            totalAlojamientoMadrid.Text = "Total: " + total.ToString();
+
+        }//falta que cuando se busque por segunda vez no se pise 
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {        
+
         }
 
-        private void label9_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Falta agregar que si clickea guarde la opcion seleccionada y validar que tenga un producto seleccionado
+        {
+            DialogResult respuesta = MessageBox.Show("¿Desea agregar otro producto?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                // Navegar a la tercera pantalla en blanco (3raPantalla)
+                _3raPantalla formaTerceraPantalla = new _3raPantalla();
+                formaTerceraPantalla.Show();
+
+                // Ocultar o cerrar el formulario actual si ya no lo necesitas
+                this.Hide(); // O this.Close() si deseas cerrarlo
+            }
+            else if (respuesta == DialogResult.No)
+            {
+                // Navegar a la cuarta pantalla (4taPantalla)
+                _4taPantalla formaCuartaPantalla = new _4taPantalla();
+                formaCuartaPantalla.Show();
+
+                // Ocultar o cerrar el formulario actual si ya no lo necesitas
+                this.Hide(); // O this.Close() si deseas cerrarlo
+            } 
+        }
+
+        private FlowLayoutPanel GetFlowLayoutPanel()
+        {
+            return flowLayoutPanel;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e, FlowLayoutPanel flowLayoutPanel)
         {
 
-
         }
 
-        private void TotalHotel1_Click(object sender, EventArgs e)
+        private void Vuelos_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dateTimePickerInicio_ValueChanged(object sender, EventArgs e)
+        private void precioTotal_Click(object sender, EventArgs e)
         {
-
+            precioTotal.Text = "Precio Total: " + acumulador.ToString("C");
+        }
+        private void precioTotal_TextChanged(object sender, EventArgs e)
+        {
+            precioTotal.Text = "Precio Total: " + acumulador.ToString("C");
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

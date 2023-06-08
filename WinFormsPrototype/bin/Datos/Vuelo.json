@@ -1,0 +1,27 @@
+[
+  {
+    "idVuelo": "4832",
+    "nombreProducto": "American Airlines",
+    "descripción": " Incluye equipaje",
+    "Precio": "500321",
+    "destino": "Madrid",
+    "origen": "Buenos Aires"
+
+  },
+  {
+    "idVuelo": "3243",
+    "nombreProducto": "Aerolineas Argentinas",
+    "descripción": "No incluye equipaje",
+    "Precio": "343333",
+    "destino": "Madrid",
+    "origen": "Amsterdam"
+  },
+  {
+    "idVuelo": "3223",
+    "nombreProducto": "Iberia",
+    "descripción": "Incluye equipaje",
+    "Precio": "323232",
+    "destino": "Miami",
+    "origen": " Barcelona"
+  }
+]
