@@ -1,0 +1,83 @@
+[
+  {
+    "idProductos": "555",
+    "nombreProducto": "Resplandor",
+    "codigoCiudad": "JFK",
+    "direccion": "Brooklyn, NY 11211, Estados Unidos",
+    "calificacion": "3",
+    "disponibilidad": ""
+
+  },
+  {
+    "idProductos": "123",
+    "nombreProducto": "HotelBudapest",
+    "codigoCiudad": "SIN",
+    "direccion": "80 Marine Parade Rd, Singapur 449269",
+    "calificacion": "4",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "344",
+    "nombreProducto": "TheShireOfMontana",
+    "codigoCiudad": "MAD",
+    "direccion": "C. de Manuela Malasaña, 6, 28004 Madrid, España",
+    "calificacion": "3",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "578",
+    "nombreProducto": "Wonderland",
+    "codigoCiudad": "YYZ",
+    "direccion": "5875 Airport Rd, Mississauga, ON L4V 1N1, Canadá",
+    "calificacion": "1",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "124",
+    "nombreProducto": "GeorgianHouse",
+    "codigoCiudad": "HAV",
+    "direccion": "4J85+J68, Lombillo y Tulipam, Factor, La Habana, Cuba",
+    "calificacion": "3",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "347",
+    "nombreProducto": "Hilton",
+    "codigoCiudad": "LAX",
+    "direccion": "Ruta 8, Km 60.5, B1633 Pilar",
+    "calificacion": "2",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "357",
+    "nombreProducto": "LondonTipton",
+    "codigoCiudad": "LHR",
+    "direccion": "75 Kingsway, London WC2B 6SR, Reino Unido",
+    "calificacion": "5",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "868",
+    "nombreProducto": "TheBeverlyHotel",
+    "codigoCiudad": "LAX",
+    "direccion": "13 Belgrave Rd, Pimlico, London SW1V 1RB, Reino Unido",
+    "calificacion": "1",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "999",
+    "nombreProducto": "HotelPensilvania",
+    "codigoCiudad": "FRA",
+    "direccion": "538 Brush Mountain Rd, Spring Mills, PA 16875, Estados Unidos",
+    "calificacion": "5",
+    "disponibilidad": ""
+  },
+  {
+    "idProductos": "341",
+    "nombreProducto": "CeKaE",
+    "codigoCiudad": "HKG",
+    "direccion": "China, Beijing, Chaoyang, lianmarulu48hao pinggailema: 100125",
+    "calificacion": "2",
+    "disponibilidad": ""
+  }
+]

@@ -9,15 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace WinFormsPrototype
 {
     public partial class Form1 : Form
     {
+        private Usuario user { get; set; }
+
         public Form1()
         {
-            ///asdasdasdsa
             InitializeComponent();
         }
 
@@ -53,45 +54,99 @@ namespace WinFormsPrototype
 
         private void button1_Click(object sender, EventArgs e) //NO ESTA LISTO.PINCHAAAAAAA!!!
         {
-            MessageBox.Show("Inicio de sesión exitoso");
 
             // Mostrar el siguiente formulario
 
-            List < Usuario > usuarios  = Usuario.TraerUsuario();
 
-            foreach (Usuario usuario in usuarios)
+            LimpiarMensajesError();
+
+            string usuarioIngreso = textBoxUsuario.Text;
+            string constraseñaIngreso = textBoxContraseña.Text;
+            this.user = DB.TraerClientePorDato(usuarioIngreso);
+
+            //Usuario usuarioValido = usuarios.FirstOrDefault(user => user.usuario == usuarioIngreso && user.contraseña == constraseñaIngreso);
+
+            if (ValidarInicioSesion())
             {
-                if (textBoxUsuario.Text == usuario.usuarios && textBoxContraseña.Text == usuario.constraseña.ToString())
-                {
-                    // Inicio de sesión exitoso
-                    MessageBox.Show("Inicio de sesión exitoso");
-
-                    // Mostrar el siguiente formulario
-                    _2daPantalla pantalla2 = new _2daPantalla();
-                    pantalla2.Show();
-
-                    // Ocultar el formulario actual
-                    this.Hide();
-
-                    // Si encontraste el usuario, puedes salir del bucle
-                    break;
-                }else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrecta");
-                }
-
+                this.Hide();
+                _2daPantalla pantalla2 = new _2daPantalla();
+                pantalla2.Show();
             }
+            else
+            {
+                usuarioErrorLbl.Show();
+                contraseñaErrorLbl.Show();
+            }
+
+            //foreach (Usuario a in usuarios)
+            //{
+            //    if ()
+            //    {
+            //        MessageBox.Show("Usuario o contraseña incorrecta");
+
+            //    }else
+            //    {
+            //        // Inicio de sesión exitoso
+            //        MessageBox.Show("Inicio de sesión exitoso");
+
+            //        // Mostrar el siguiente formulario
+            //        _2daPantalla pantalla2 = new _2daPantalla();
+            //        pantalla2.Show();
+
+            //        // Ocultar el formulario actual
+            //        this.Hide();
+
+            //        // Si encontraste el usuario, puedes salir del bucle
+            //        break;
+            //    }
+            //}
         }
 
-        private bool TraerUsuario()
+        private bool ValidarInicioSesion()
         {
-            throw new NotImplementedException();
+            bool valido = true;
+
+            if (string.IsNullOrEmpty(textBoxUsuario.Text))
+            {
+                usuarioErrorLbl.Text = "El usuario no puede estar vacio.";
+                valido = false;
+            }
+
+            if (string.IsNullOrEmpty(textBoxContraseña.Text))
+            {
+                contraseñaErrorLbl.Text = "La contraseña no puede estar vacia.";
+                valido = false;
+            }
+
+            if (!valido) { return valido; }
+
+            if (this.user == null)
+            {
+                usuarioErrorLbl.Text = "El usuario no se encuentra registrado.";
+                valido = false;
+            }
+            else
+            {
+                if (!string.Equals(textBoxContraseña.Text, this.user.contraseña, StringComparison.Ordinal))
+                {
+                    contraseñaErrorLbl.Text = "La contraseña es incorrecta.";
+                    valido = false;
+                }
+            }
+
+            return valido;
         }
+
+        private void LimpiarMensajesError()
+        {
+            usuarioErrorLbl.Text = "";
+            contraseñaErrorLbl.Text = "";
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-
+            Application.Exit();
         }
     }
 }

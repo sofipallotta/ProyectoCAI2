@@ -1,0 +1,102 @@
+[
+  {
+    "IdVuelo": "123456789123456",
+    "Origen": "Argentina",
+    "Destino": "Miami",
+    "Fecha_Salida": "12/03/23 22:30:00",
+    "Fecha_Arribo": "13/03/23 5:30:00",
+    "Tiempo_Vuelo": "08:30:00",
+    "Aerolinea": "VolaConmigo",
+    "Tarifa": "1632100"
+  },
+  {
+    "IdVuelo": "188650130123516",
+    "Origen": "Peru",
+    "Destino": "Paraguay",
+    "Fecha_Salida": "19/07/23",
+    "Fecha_Arribo": "19/07/23",
+    "Tiempo_Vuelo": "03:50:00",
+    "Aerolinea": "FlyAvi",
+    "Tarifa": "456300"
+  },
+  {
+    "IdVuelo": "999103506000578",
+    "Origen": "Chile",
+    "Destino": "Afganistan",
+    "Fecha_Salida": "19/06/24",
+    "Fecha_Arribo": "20/06/24",
+    "Tiempo_Vuelo": "21:25:00",
+    "Aerolinea": "VolaConmigo",
+    "Tarifa": "2223000"
+  },
+  {
+    "IdVuelo": "987653157111557",
+    "Origen": "Paraguay",
+    "Destino": "Francia",
+    "Fecha_Salida": "19/10/23",
+    "Fecha_Arribo": "20/10/23",
+    "Tiempo_Vuelo": "12:40:00",
+    "Aerolinea": "ViajeLejos",
+    "Tarifa": "5363000"
+  },
+  {
+    "IdVuelo": "658046317011777",
+    "Origen": "Argentina",
+    "Destino": "Japon",
+    "Fecha_Salida": "11/05/23",
+    "Fecha_Arribo": "13/05/23",
+    "Tiempo_Vuelo": "31:30:00",
+    "Aerolinea": "AndaNomas",
+    "Tarifa": "23253000"
+  },
+  {
+    "IdVuelo": "333753198751588",
+    "Origen": "Peru",
+    "Destino": "Camerun",
+    "Fecha_Salida": "30/12/24",
+    "Fecha_Arribo": "2/01/25",
+    "Tiempo_Vuelo": "33:50:00",
+    "Aerolinea": "AndaNomas",
+    "Tarifa": "33333000"
+  },
+  {
+    "IdVuelo": "133345989315556",
+    "Origen": "Uruguay",
+    "Destino": "Estados Unidos",
+    "Fecha_Salida": "12/05/23",
+    "Fecha_Arribo": "13/05/23",
+    "Tiempo_Vuelo": "10:25:00",
+    "Aerolinea": "AltoAvion",
+    "Tarifa": "13126300"
+  },
+  {
+    "IdVuelo": "523756889223222",
+    "Origen": "Chile",
+    "Destino": "Argentina",
+    "Fecha_Salida": "01/05/23",
+    "Fecha_Arribo": "02/05/23",
+    "Tiempo_Vuelo": "16:45:00",
+    "Aerolinea": "VolaVola",
+    "Tarifa": "982000"
+  },
+  {
+    "IdVuelo": "391357896213510",
+    "Origen": "Argentina",
+    "Destino": "China",
+    "Fecha_Salida": "28/08/23",
+    "Fecha_Arribo": "31/08/23",
+    "Tiempo_Vuelo": "48:30:00",
+    "Aerolinea": "AeroVuelo",
+    "Tarifa": "999999000"
+  },
+  {
+    "IdVuelo": "920750880275232",
+    "Origen": "Uruguay",
+    "Destino": "Mexico",
+    "Fecha_Salida": "23/05/23",
+    "Fecha_Arribo": "223/05/23",
+    "Tiempo_Vuelo": "01:50:00",
+    "Aerolinea": "FlyAvi",
+    "Tarifa": "555000"
+  }
+]

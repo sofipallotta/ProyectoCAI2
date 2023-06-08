@@ -11,7 +11,12 @@ namespace WinFormsPrototype
 {
     public partial class _3raPantalla : Form
     {
+        //Comienzo una lista de vuelos y alojamientos para ir guardando los datos
+        Vuelo vuelosSeleccionados = new Vuelo();
+        Alojamiento alojamientosSeleccionados = new Alojamiento();
+
         double acumulador = 0;
+
         public _3raPantalla()
         {
             InitializeComponent();
@@ -49,9 +54,10 @@ namespace WinFormsPrototype
 
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (radioButtonAlojamiento.Checked)
             {
                 groupBoxAlojamiento.Visible = true;
+                Show.
             }
             else
             {
@@ -379,6 +385,16 @@ namespace WinFormsPrototype
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxOrigen_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

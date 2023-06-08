@@ -72,3 +72,5 @@ C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.exe
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.dll
 C:\Users\sofip\Documents\GitHub\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\pablo\source\repos\ProyectoCAI2\WinFormsPrototype\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\pablo\source\repos\ProyectoCAI2\WinFormsPrototype\obj\Debug\net5.0-windows\WinFormsPrototype.csproj.CopyComplete

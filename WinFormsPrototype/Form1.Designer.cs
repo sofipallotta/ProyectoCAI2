@@ -39,7 +39,9 @@ namespace WinFormsPrototype
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.usuarioErrorLbl = new System.Windows.Forms.Label();
+            this.contraseñaErrorLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +85,6 @@ namespace WinFormsPrototype
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(253, 23);
             this.textBoxUsuario.TabIndex = 6;
-            this.textBoxUsuario.Text = "Ingrese su nombre de usuario";
             this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // textBoxContraseña
@@ -93,7 +94,6 @@ namespace WinFormsPrototype
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(253, 23);
             this.textBoxContraseña.TabIndex = 7;
-            this.textBoxContraseña.Text = "Ingrese su contraseña";
             // 
             // button1
             // 
@@ -106,23 +106,41 @@ namespace WinFormsPrototype
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnSalir
             // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(101, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 45);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSalir.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(101, 295);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(162, 45);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // usuarioErrorLbl
+            // 
+            this.usuarioErrorLbl.AutoSize = true;
+            this.usuarioErrorLbl.Location = new System.Drawing.Point(251, 181);
+            this.usuarioErrorLbl.Name = "usuarioErrorLbl";
+            this.usuarioErrorLbl.Size = new System.Drawing.Size(0, 15);
+            this.usuarioErrorLbl.TabIndex = 10;
+            // 
+            // contraseñaErrorLbl
+            // 
+            this.contraseñaErrorLbl.AutoSize = true;
+            this.contraseñaErrorLbl.Location = new System.Drawing.Point(251, 250);
+            this.contraseñaErrorLbl.Name = "contraseñaErrorLbl";
+            this.contraseñaErrorLbl.Size = new System.Drawing.Size(0, 15);
+            this.contraseñaErrorLbl.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 411);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.contraseñaErrorLbl);
+            this.Controls.Add(this.usuarioErrorLbl);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxContraseña);
             this.Controls.Add(this.textBoxUsuario);
@@ -144,7 +162,9 @@ namespace WinFormsPrototype
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label usuarioErrorLbl;
+        private System.Windows.Forms.Label contraseñaErrorLbl;
     }
 }
 
