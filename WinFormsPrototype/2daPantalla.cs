@@ -35,7 +35,10 @@ namespace WinFormsPrototype
 
         private void button2_Click(object sender, EventArgs e)
         {
-            return;
+            Form1 pantalla1 = new Form1();
+            pantalla1.Show();
+            this.Hide();
         }
+
     }
 }

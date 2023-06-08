@@ -30,20 +30,18 @@ namespace WinFormsPrototype
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlojamiento = new System.Windows.Forms.RadioButton();
+            this.radioButtonVuelo = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerInicio = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelDestinoVuelo = new System.Windows.Forms.Label();
             this.producto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxOrigen = new System.Windows.Forms.TextBox();
-            this.textBoxDestino = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelOrigenVuelo = new System.Windows.Forms.Label();
+            this.textBoxSeleccionMenores = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxSeleccionAdultos = new System.Windows.Forms.TextBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -62,6 +60,10 @@ namespace WinFormsPrototype
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBoxAlojamiento = new System.Windows.Forms.GroupBox();
             this.precioTotal = new System.Windows.Forms.Label();
+            this.comboBoxOrigenVuelo = new System.Windows.Forms.ComboBox();
+            this.comboBoxDestinoVuelo = new System.Windows.Forms.ComboBox();
+            this.textBoxSeleccionInfante = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBoxAlojamiento.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,29 +79,29 @@ namespace WinFormsPrototype
             this.label2.Text = "Ventas";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // radioButton1
+            // radioButtonAlojamiento
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(119, 104);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 19);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Alojamientos";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.radioButtonAlojamiento.AutoSize = true;
+            this.radioButtonAlojamiento.Location = new System.Drawing.Point(119, 104);
+            this.radioButtonAlojamiento.Name = "radioButtonAlojamiento";
+            this.radioButtonAlojamiento.Size = new System.Drawing.Size(95, 19);
+            this.radioButtonAlojamiento.TabIndex = 11;
+            this.radioButtonAlojamiento.TabStop = true;
+            this.radioButtonAlojamiento.Text = "Alojamientos";
+            this.radioButtonAlojamiento.UseVisualStyleBackColor = true;
+            this.radioButtonAlojamiento.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonVuelo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(311, 104);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 19);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Vuelos";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButtonVuelo.AutoSize = true;
+            this.radioButtonVuelo.Location = new System.Drawing.Point(311, 104);
+            this.radioButtonVuelo.Name = "radioButtonVuelo";
+            this.radioButtonVuelo.Size = new System.Drawing.Size(60, 19);
+            this.radioButtonVuelo.TabIndex = 12;
+            this.radioButtonVuelo.TabStop = true;
+            this.radioButtonVuelo.Text = "Vuelos";
+            this.radioButtonVuelo.UseVisualStyleBackColor = true;
+            this.radioButtonVuelo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label3
             // 
@@ -118,14 +120,15 @@ namespace WinFormsPrototype
             this.dateTimePickerInicio.TabIndex = 21;
             this.dateTimePickerInicio.ValueChanged += new System.EventHandler(this.DateTimePickerInicio_ValueChanged);
             // 
-            // label5
+            // labelDestinoVuelo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(465, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 15);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Seleccione destino";
+            this.labelDestinoVuelo.AutoSize = true;
+            this.labelDestinoVuelo.Location = new System.Drawing.Point(465, 145);
+            this.labelDestinoVuelo.Name = "labelDestinoVuelo";
+            this.labelDestinoVuelo.Size = new System.Drawing.Size(105, 15);
+            this.labelDestinoVuelo.TabIndex = 24;
+            this.labelDestinoVuelo.Text = "Seleccione destino";
+            this.labelDestinoVuelo.Visible = false;
             // 
             // producto
             // 
@@ -140,75 +143,60 @@ namespace WinFormsPrototype
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 177);
+            this.label1.Location = new System.Drawing.Point(207, 177);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 28;
             this.label1.Text = "Menores";
             this.label1.Click += new System.EventHandler(this.Label1_Click_2);
             // 
-            // label4
+            // labelOrigenVuelo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(220, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 15);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Seleccione origen";
+            this.labelOrigenVuelo.AutoSize = true;
+            this.labelOrigenVuelo.Location = new System.Drawing.Point(220, 145);
+            this.labelOrigenVuelo.Name = "labelOrigenVuelo";
+            this.labelOrigenVuelo.Size = new System.Drawing.Size(100, 15);
+            this.labelOrigenVuelo.TabIndex = 31;
+            this.labelOrigenVuelo.Text = "Seleccione origen";
+            this.labelOrigenVuelo.Visible = false;
             // 
-            // textBoxOrigen
+            // textBoxSeleccionMenores
             // 
-            this.textBoxOrigen.Location = new System.Drawing.Point(342, 139);
-            this.textBoxOrigen.Name = "textBoxOrigen";
-            this.textBoxOrigen.Size = new System.Drawing.Size(75, 23);
-            this.textBoxOrigen.TabIndex = 32;
-            this.textBoxOrigen.TextChanged += new System.EventHandler(this.TextBox1_TextChanged_1);
-            // 
-            // textBoxDestino
-            // 
-            this.textBoxDestino.Location = new System.Drawing.Point(576, 142);
-            this.textBoxDestino.Name = "textBoxDestino";
-            this.textBoxDestino.Size = new System.Drawing.Size(79, 23);
-            this.textBoxDestino.TabIndex = 33;
-            this.textBoxDestino.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(434, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(35, 23);
-            this.textBox3.TabIndex = 34;
+            this.textBoxSeleccionMenores.Location = new System.Drawing.Point(272, 174);
+            this.textBoxSeleccionMenores.Name = "textBoxSeleccionMenores";
+            this.textBoxSeleccionMenores.Size = new System.Drawing.Size(35, 23);
+            this.textBoxSeleccionMenores.TabIndex = 34;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(204, 177);
+            this.label9.Location = new System.Drawing.Point(42, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 15);
             this.label9.TabIndex = 35;
             this.label9.Text = "Adultos";
             // 
-            // textBox4
+            // textBoxSeleccionAdultos
             // 
-            this.textBox4.Location = new System.Drawing.Point(275, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(35, 23);
-            this.textBox4.TabIndex = 36;
+            this.textBoxSeleccionAdultos.Location = new System.Drawing.Point(113, 174);
+            this.textBoxSeleccionAdultos.Name = "textBoxSeleccionAdultos";
+            this.textBoxSeleccionAdultos.Size = new System.Drawing.Size(35, 23);
+            this.textBoxSeleccionAdultos.TabIndex = 36;
             // 
-            // button2
+            // buttonBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(510, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.buttonBuscar.Location = new System.Drawing.Point(510, 174);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 37;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.Button2_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(11, 37);
+            this.checkBox1.Location = new System.Drawing.Point(24, 48);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(196, 19);
             this.checkBox1.TabIndex = 31;
@@ -220,7 +208,7 @@ namespace WinFormsPrototype
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(11, 62);
+            this.checkBox2.Location = new System.Drawing.Point(495, 328);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(189, 19);
             this.checkBox2.TabIndex = 32;
@@ -253,14 +241,14 @@ namespace WinFormsPrototype
             // 
             // labelTotalReserva
             // 
-            this.labelTotalReserva.Location = new System.Drawing.Point(0, 0);
+            this.labelTotalReserva.Location = new System.Drawing.Point(485, 271);
             this.labelTotalReserva.Name = "labelTotalReserva";
             this.labelTotalReserva.Size = new System.Drawing.Size(100, 23);
             this.labelTotalReserva.TabIndex = 47;
             // 
             // TotalHotel1
             // 
-            this.TotalHotel1.Location = new System.Drawing.Point(0, 0);
+            this.TotalHotel1.Location = new System.Drawing.Point(399, 260);
             this.TotalHotel1.Name = "TotalHotel1";
             this.TotalHotel1.Size = new System.Drawing.Size(100, 23);
             this.TotalHotel1.TabIndex = 46;
@@ -315,7 +303,7 @@ namespace WinFormsPrototype
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(11, 37);
+            this.checkBox4.Location = new System.Drawing.Point(544, 298);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(178, 19);
             this.checkBox4.TabIndex = 41;
@@ -327,7 +315,7 @@ namespace WinFormsPrototype
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(11, 62);
+            this.checkBox5.Location = new System.Drawing.Point(447, 310);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(187, 19);
             this.checkBox5.TabIndex = 42;
@@ -371,19 +359,14 @@ namespace WinFormsPrototype
             this.groupBoxAlojamiento.Controls.Add(this.checkBox7);
             this.groupBoxAlojamiento.Controls.Add(this.totalAlojamientoMadrid);
             this.groupBoxAlojamiento.Controls.Add(this.checkBox6);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox5);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox4);
             this.groupBoxAlojamiento.Controls.Add(this.TotalHotel3);
             this.groupBoxAlojamiento.Controls.Add(this.TotalHotel2);
             this.groupBoxAlojamiento.Controls.Add(this.label8);
             this.groupBoxAlojamiento.Controls.Add(this.label7);
-            this.groupBoxAlojamiento.Controls.Add(this.TotalHotel1);
-            this.groupBoxAlojamiento.Controls.Add(this.labelTotalReserva);
             this.groupBoxAlojamiento.Controls.Add(this.label6);
             this.groupBoxAlojamiento.Controls.Add(this.checkBox3);
-            this.groupBoxAlojamiento.Controls.Add(this.checkBox2);
             this.groupBoxAlojamiento.Controls.Add(this.checkBox1);
-            this.groupBoxAlojamiento.Location = new System.Drawing.Point(717, 244);
+            this.groupBoxAlojamiento.Location = new System.Drawing.Point(605, 250);
             this.groupBoxAlojamiento.Name = "groupBoxAlojamiento";
             this.groupBoxAlojamiento.Size = new System.Drawing.Size(47, 79);
             this.groupBoxAlojamiento.TabIndex = 30;
@@ -402,28 +385,71 @@ namespace WinFormsPrototype
             this.precioTotal.Text = "label10";
             this.precioTotal.Click += new System.EventHandler(this.precioTotal_Click);
             // 
+            // comboBoxOrigenVuelo
+            // 
+            this.comboBoxOrigenVuelo.FormattingEnabled = true;
+            this.comboBoxOrigenVuelo.Location = new System.Drawing.Point(326, 139);
+            this.comboBoxOrigenVuelo.Name = "comboBoxOrigenVuelo";
+            this.comboBoxOrigenVuelo.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxOrigenVuelo.TabIndex = 39;
+            this.comboBoxOrigenVuelo.Visible = false;
+            this.comboBoxOrigenVuelo.SelectedIndexChanged += new System.EventHandler(this.comboBoxOrigen_SelectedIndexChanged);
+            // 
+            // comboBoxDestinoVuelo
+            // 
+            this.comboBoxDestinoVuelo.FormattingEnabled = true;
+            this.comboBoxDestinoVuelo.Location = new System.Drawing.Point(576, 139);
+            this.comboBoxDestinoVuelo.Name = "comboBoxDestinoVuelo";
+            this.comboBoxDestinoVuelo.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxDestinoVuelo.TabIndex = 40;
+            this.comboBoxDestinoVuelo.Visible = false;
+            // 
+            // textBoxSeleccionInfante
+            // 
+            this.textBoxSeleccionInfante.Location = new System.Drawing.Point(424, 174);
+            this.textBoxSeleccionInfante.Name = "textBoxSeleccionInfante";
+            this.textBoxSeleccionInfante.Size = new System.Drawing.Size(35, 23);
+            this.textBoxSeleccionInfante.TabIndex = 42;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(359, 177);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 15);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Infantes";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // _3raPantalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxSeleccionInfante);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxDestinoVuelo);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.comboBoxOrigenVuelo);
             this.Controls.Add(this.precioTotal);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.labelTotalReserva);
+            this.Controls.Add(this.TotalHotel1);
+            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.textBoxSeleccionAdultos);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBoxDestino);
-            this.Controls.Add(this.textBoxOrigen);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxSeleccionMenores);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.labelOrigenVuelo);
             this.Controls.Add(this.groupBoxAlojamiento);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.producto);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelDestinoVuelo);
             this.Controls.Add(this.dateTimePickerInicio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonVuelo);
+            this.Controls.Add(this.radioButtonAlojamiento);
             this.Controls.Add(this.label2);
             this.Name = "_3raPantalla";
             this.Text = "_3raPantalla";
@@ -438,20 +464,18 @@ namespace WinFormsPrototype
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonAlojamiento;
+        private System.Windows.Forms.RadioButton radioButtonVuelo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerInicio;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelDestinoVuelo;
         private System.Windows.Forms.Label producto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxOrigen;
-        private System.Windows.Forms.TextBox textBoxDestino;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label labelOrigenVuelo;
+        private System.Windows.Forms.TextBox textBoxSeleccionMenores;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxSeleccionAdultos;
+        private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
@@ -470,5 +494,9 @@ namespace WinFormsPrototype
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.GroupBox groupBoxAlojamiento;
         private System.Windows.Forms.Label precioTotal;
+        private System.Windows.Forms.ComboBox comboBoxOrigenVuelo;
+        private System.Windows.Forms.ComboBox comboBoxDestinoVuelo;
+        private System.Windows.Forms.TextBox textBoxSeleccionInfante;
+        private System.Windows.Forms.Label label10;
     }
 }

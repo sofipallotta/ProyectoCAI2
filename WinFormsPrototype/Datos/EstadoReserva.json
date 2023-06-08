@@ -1,0 +1,14 @@
+[
+  {
+    "IdEstado": "1",
+    "Descripcion": "Presupuesto"
+  },
+  {
+    "IdEstado": "2",
+    "Descripcion": "Pre-reserva"
+  },
+  {
+    "IdEstado": "3",
+    "Descripcion": "Reserva"
+  }
+]
